@@ -1,0 +1,35 @@
+{
+  "name": "biz-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Six business analytics dashboards: FastAPI + SQL + React/TS, Cian-like design system",
+  "workspaces": [
+    "packages/*",
+    "apps/*/frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "lint": "eslint . --max-warnings 0",
+    "lint:py": "python -m ruff check .",
+    "style:check": "python tools/check_style.py",
+    "check": "npm run lint && npm run lint:py && npm run style:check && npm run build",
+    "dev:sales": "python -m uvicorn app.main:app --app-dir apps/sales-pulse/backend --port 8001",
+    "dev:stock": "python -m uvicorn app.main:app --app-dir apps/stockroom/backend --port 8002",
+    "dev:fin": "python -m uvicorn app.main:app --app-dir apps/finboard/backend --port 8003",
+    "dev:crm": "python -m uvicorn app.main:app --app-dir apps/crm-funnel/backend --port 8004",
+    "dev:churn": "python -m uvicorn app.main:app --app-dir apps/churn-radar/backend --port 8005",
+    "dev:pricing": "python -m uvicorn app.main:app --app-dir apps/pricing-lab/backend --port 8006"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.2"
+  }
+}

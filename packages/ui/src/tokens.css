@@ -1,0 +1,20 @@
+:root {
+  --blue: #0060ff;
+  --blue-700: #0043b8;
+  --blue-050: #e9f0ff;
+  --ink: #0a0a0a;
+  --ink-2: #3d434d;
+  --muted: #7b8089;
+  --line: #e7e8ec;
+  --line-soft: #f1f2f5;
+  --surface: #f6f7f9;
+  --white: #ffffff;
+  --green: #0f9d58;
+  --red: #e2412f;
+  --amber: #e59a00;
+  --radius: 22px;
+  --radius-sm: 14px;
+  --shadow: 0 1px 2px rgba(10, 10, 10, 0.05), 0 10px 30px rgba(10, 10, 10, 0.06);
+  --font: "Inter Tight", "Inter", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --hair: rgba(255, 255, 255, 0.42);
+}

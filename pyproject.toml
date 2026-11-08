@@ -1,0 +1,12 @@
+[tool.ruff]
+line-length = 200
+target-version = "py312"
+exclude = [".tools", ".venv", "node_modules", "packages", "tools", "apps/*/frontend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "PLR0911", "PLR0915", "SIM", "B", "C4", "UP"]
+ignore = ["B008"]
+
+[tool.ruff.lint.pylint]
+max-returns = 1
+max-statements = 2
